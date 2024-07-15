@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{%  block title %}LOGIN{% endblock title %}
+
+
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="background-color:hotpink">
+                    <h3 class="text-center">Login</h3>
+                </div>
+                <div class="card-body">
+                    <table>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <tr>
+
+                            <td><label for="username">User Name:</label></td>
+                            <td><input type="text" id="username" name="username" class="form-control" required></td>
+                        </tr>
+                        <tr>
+
+                            <td><label for="password">Password:</label></td>
+                            <td><input type="password" id="password" name="password" class="form-control" required></td>
+                        </tr>
+                        <tr>
+
+                            <td> <button type="submit" name="submit" class="btn btn-block mt-5" style="background-color:hotpink">Login</button></td>
+                            <td></td>
+                        </tr>
+                    </form>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        {% for message in messages %}
+        <script>
+            alert("{{ message }}")
+        </script>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

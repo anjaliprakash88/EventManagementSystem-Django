@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{%  block title %}EVENTS{% endblock title %}
+
+
+
+{% block content %}
+<h2 class="text-center mt-5" style="color:hotpink; text-decoration:underline 2px hotpink">EVENTS</h2>
+<div class="container">
+    {% for i in eve %}
+    <div class="card text-center" style="width: 18rem; display:inline-block; margin:20px;">
+    <img src="{{ i.img.url }}" class="card-img-top" alt="..." height="200px" width="200px">
+     <div class="card-body">
+    <h5 class="card-title">{{ i.name }}</h5>
+    <p class="card-text">{{ i.desc }}</p>
+<!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+  {% endfor %}
+<!--     </div>-->
+<!--</div>-->
+<!--    <div class="card text-center" style="width: 18rem; display:inline-block; margin:20px;">-->
+<!--    <img src="{% static 'images/Image5 (2).jpg' %}" class="card-img-top" alt="..." height="200px" width="200px">-->
+<!--     <div class="card-body">-->
+<!--    <h5 class="card-title">Event1</h5>-->
+<!--    <p class="card-text">Best option for your Event....!! Join with Us..</p>-->
+<!--&lt;!&ndash;    <a href="#" class="btn btn-primary">Go somewhere</a>&ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
+<!--    <div class="card text-center" style="width: 18rem; display:inline-block; margin:20px;">-->
+<!--    <img src="{% static 'images/Image5 (2).jpg' %}" class="card-img-top" alt="..." height="200px" width="200px">-->
+<!--     <div class="card-body">-->
+<!--    <h5 class="card-title">Event1</h5>-->
+<!--    <p class="card-text">Best option for your Event....!! Join with Us..</p>-->
+<!--&lt;!&ndash;    <a href="#" class="btn btn-primary">Go somewhere</a>&ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
+</div>
+{% endblock%}

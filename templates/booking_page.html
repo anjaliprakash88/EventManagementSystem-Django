@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{%  block title %}BOOKING{% endblock title %}
+
+
+
+{% block content %}
+<div class="container mt-5" >
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" style="background-color: hotpink;">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-5" style="text-decoration:underline 2px black">BOOKING YOUR EVENTS</h1>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.as_p }}
+                        </div>
+                        <button type="submit" class="btn btn-dark btn-block mt-4">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

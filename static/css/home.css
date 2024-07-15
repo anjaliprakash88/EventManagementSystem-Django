@@ -1,0 +1,7 @@
+/* home.css */
+
+.d-block w-100 {
+    max-height: 300px; /* Adjust the value to your desired maximum height */
+    width: auto; /* Ensure the width adjusts proportionally */
+    margin: auto; /* Center the image horizontally */
+}
